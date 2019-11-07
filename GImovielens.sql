@@ -22,7 +22,7 @@ SELECT name FROM occupations
     -> INNER JOIN users u ON user_genre_ratings.user_id = u.id ) AS user_horror_ratings
     -> WHERE genre_id = (SELECT id FROM genres WHERE name = 'Horror')
     -> GROUP BY occupation_id
-    -> ORDER BY COUNT(occupation_id)
+    -> ORDER BY COUNT(occupation_id) DESC
     -> LIMIT 1
     -> ) AS uhr
     -> );
